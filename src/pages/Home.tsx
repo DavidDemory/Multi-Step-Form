@@ -1,11 +1,14 @@
+import Form from '../components/Form.tsx';
+import '../styles/Home.scss';
+
 interface HomeProps {
 
 }
 
 const Home = ({}: HomeProps) => {
   return (
-    <div>
-      <h1>Hello boilerplate</h1>
+    <div className={'home-page'}>
+      <Form />
     </div>
   );
 };

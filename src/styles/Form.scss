@@ -1,0 +1,46 @@
+@import "variables";
+
+.container {
+  width: 940px;
+  height: 600px;
+  border-radius: 1rem;
+  background-color: $white;
+  color: #1a1a1a;
+  padding: 1rem;
+
+  .form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: .5rem;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    .left-part {
+      min-width: 275px;
+      border-radius: inherit;
+      background-image: url("../assets/images/bg-sidebar-desktop.svg");
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 2rem;
+      padding: 2rem;
+      color: $white;
+    }
+
+    .right-part {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 84px 0 1rem;
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
