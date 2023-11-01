@@ -76,16 +76,17 @@ h2 {
 
 h3 {
     font-family: 'UbuntuBold', sans-serif;
-    font-size: 32px;
+    color: var(--marineBlue);
+    font-size: 23px;
     font-weight: 100;
     margin: 0;
 }
 
 h4 {
-    font-family: 'UbuntuBold', sans-serif;
-    font-size: 24px;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: var(--coolGray);
+    font-size: 13px;
     font-weight: 100;
-    text-transform: uppercase;
     margin: 0;
 }
 

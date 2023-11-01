@@ -1,0 +1,46 @@
+@import "variables";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+
+  .input-info-container {
+    font-family: 'UbuntuMedium', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+
+    label {
+      color: $marineBlue;
+    }
+
+    small {
+      font-family: 'UbuntuBold', sans-serif;
+      color: $strawberryRed;
+    }
+  }
+
+  input {
+    font-family: inherit;
+    background-color: $white;
+    border: 1px solid $lightGray;
+    border-radius: 8px;
+    padding: 1rem;
+    color: $marineBlue;
+    cursor: pointer;
+
+    &.input-error {
+      border-color: $strawberryRed;
+    }
+
+    &:hover {
+      border-color: $purplishBlue;
+    }
+
+    &::placeholder {
+      color: $coolGray;
+    }
+  }
+}

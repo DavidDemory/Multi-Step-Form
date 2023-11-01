@@ -1,5 +1,5 @@
-import Form from '../components/Form.tsx';
 import '../styles/Home.scss';
+import Form from '../components/Form.tsx';
 
 interface HomeProps {
 
