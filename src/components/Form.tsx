@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Form.scss';
 import StepButton from './StepButton.tsx';
 import FirstFormStep from './FirstFormStep.tsx';
+import SecondFormStep from './SecondFormStep.tsx';
 
 interface stepLayoutType {
   title: string,
@@ -34,6 +35,8 @@ const Form = () => {
         </div>
         <div className="right-part">
           {stepCount === 1 && <FirstFormStep handleNextStep={() => setStepCount((stepCount + 1))} />}
+          {stepCount === 2 && <SecondFormStep handlePrevStep={() => setStepCount(stepCount - 1)}
+                                              handleNextStep={() => setStepCount((stepCount + 1))} />}
           {stepCount === buttonsSubtitle.length && <button type={'submit'}>Submit</button>}
         </div>
       </div>

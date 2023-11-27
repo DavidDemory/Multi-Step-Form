@@ -1,5 +1,5 @@
 import { StepLayout } from './Form.tsx';
-import { useAppState } from '../state.tsx';
+import { stateType, useAppState } from '../state.tsx';
 import { useForm } from 'react-hook-form';
 import Input from './Input.tsx';
 
@@ -8,6 +8,7 @@ interface FirstFormStepProps {
 }
 
 const FirstFormStep = ({handleNextStep}: FirstFormStepProps) => {
+  // @ts-ignore
   const [state, setState] = useAppState();
   const {
     handleSubmit,
@@ -15,14 +16,14 @@ const FirstFormStep = ({handleNextStep}: FirstFormStepProps) => {
     formState: {errors},
   } = useForm({defaultValues: state, mode: 'onSubmit'});
 
-  const saveData = (data) => {
+  const saveData = (data: Partial<stateType>) => {
     setState({...state, ...data});
     handleNextStep();
   };
 
   return (
-    <StepLayout title={'Personal nfo'} subtitle={'Please provide you name, email address and phone number.'}>
-      <form onSubmit={handleSubmit(saveData)} className={'first-form-container'}>
+    <StepLayout title={'Personal info'} subtitle={'Please provide you name, email address and phone number.'}>
+      <form onSubmit={handleSubmit(saveData)} className={'basic-form-container'}>
         <div className={'inputs-container'}>
           <Input label={'Name'} name={'name'} error={errors?.name}>
             <input placeholder={'eg. Stephen King'}
@@ -40,7 +41,7 @@ const FirstFormStep = ({handleNextStep}: FirstFormStepProps) => {
                    className={errors?.name && 'input-error'} />
           </Input>
         </div>
-        <button>Next Step</button>
+        <button type={'submit'}>Next Step</button>
       </form>
     </StepLayout>
   );

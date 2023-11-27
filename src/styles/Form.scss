@@ -52,8 +52,17 @@
   flex-direction: column;
   flex-wrap: nowrap;
 
+  .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-  .first-form-container {
+  button {
+    align-self: flex-end;
+  }
+
+  .basic-form-container {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -67,8 +76,15 @@
       flex-grow: 2;
     }
 
-    button {
-      align-self: flex-end;
+    .cards-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1.2rem;
+
+      > * {
+        flex: 1 1 0;
+      }
     }
   }
+
 }
